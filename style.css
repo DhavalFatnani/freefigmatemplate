@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+html{
+    text-size-adjust: 100%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,16 +12,38 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body{
+    background-color: #fff;
+    overflow-x: visible;
+    font-size: 14px;
+}
+
 .navbar{
     background-color: transparent;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    line-height: 5rem;
+    margin: auto;
+    width: 73%;
+    height: 120px;
+    position: relative;
+    z-index: 1000;
 }
 
 .logo{
     cursor: pointer;
+    width: 280px;
+    max-width: none;
+    position: relative;
+}
+
+img{
+    vertical-align: middle;
+    display: inline-block;
+    border: 0px;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    width: 70%;
 }
 
 .checkBtn{
@@ -36,12 +62,52 @@
     line-height: 80px;
 }
 
+.nav .list{
+    width: 664px;
+}
+
 .nav ul{
     display: flex;
     list-style: none;
+    position: relative;
+    z-index: 1000;
+    
+}
+
+
+.nav ul li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    white-space: nowrap;
 }
 
 .nav ul li a{
-    padding: 10px 20px;
+    padding: 0 10px;
+    font-size: 12px;
+    text-align: left;
+    font-weight: 500;
+    color: #6b6b6b;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 1s;
     
+}
+
+.nav ul li a:hover{
+    color: #F53838;
+}
+
+.nav ul li img{
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    vertical-align: middle;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.nav ul li img:hover{
+    transform: scale(1.2);
+    filter: brightness(50%);
 }
